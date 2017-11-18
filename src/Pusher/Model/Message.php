@@ -12,6 +12,7 @@ namespace Pusher\Model;
 class Message implements MessageInterface
 {
     protected $text;
+    protected $title;
     protected $priority;
     protected $ttl;
 
@@ -22,9 +23,10 @@ class Message implements MessageInterface
      * @param int $priority Message priority
      * @param int $ttl Message TTL
      */
-    public function __construct(string $text, int $priority = MessageInterface::PRIORITY_HIGH, int $ttl = 3600)
+    public function __construct(string $text, string $title, int $priority = MessageInterface::PRIORITY_HIGH, int $ttl = 3600)
     {
         $this->text = $text;
+        $this->title = $title;
         $this->priority = $priority;
         $this->ttl = $ttl;
     }
@@ -37,6 +39,16 @@ class Message implements MessageInterface
     public function getText():string
     {
         return $this->text;
+    }
+
+    public function getTitle(): string
+    {
+        return $this->title;
+    }
+
+    public function setTitle(string $title): void
+    {
+        $this->title = $title;
     }
 
     public function setPriority(int $priority):void

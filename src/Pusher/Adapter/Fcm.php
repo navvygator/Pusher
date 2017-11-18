@@ -48,6 +48,7 @@ class Fcm implements AdapterInterface
         $data = [
             'notification' => [
                 'body' => $message->getText(),
+                'title' => $message->getTitle()
             ],
             'registration_ids' => $tokens,
             'time_to_live' => $message->getTTL(),

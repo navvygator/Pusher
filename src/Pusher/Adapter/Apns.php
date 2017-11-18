@@ -49,7 +49,10 @@ class Apns implements AdapterInterface
         $gateway = $this->environment == AdapterInterface::ENVIRONMENT_PRODUCTION ? self::PUSH_PROD : self::PUSH_DEV;
         $payload = json_encode([
             'aps' => [
-                'alert' => $message->getText(),
+                'alert' => [
+                    'title' => $message->getTitle(),
+                    'body' => $message->getText(),
+                ]
             ],
         ]);
 
