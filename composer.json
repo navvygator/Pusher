@@ -1,13 +1,13 @@
 {
-  "name": "mxp100/pusher",
-  "description": "PHP push notifications to APNS, FCM",
+  "name": "navvygator/pusher",
+  "description": "PHP push notifications to APNS, FCM fork from mxp100/pusher by Yuriy Potemkin",
   "version": "1.0",
   "keywords": ["push","notifications","apns","fcm"],
   "type": "library",
   "license": "Apache-2.0",
   "authors": [
     {
-      "name": "Yuriy Potemkin"
+      "name": "Mikhail Mazein"
     }
   ],
   "require": {
