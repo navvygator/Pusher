@@ -41,7 +41,7 @@ class Fcm implements AdapterInterface
      * @param \Pusher\Model\MessageInterface $message
      * @throws \Pusher\Exception\AdapterException
      */
-    public function push(DeviceCollection $devices, MessageInterface $message):void
+    public function push(DeviceCollection $devices, MessageInterface $message)
     {
         $tokens = $devices->getTokens();
 

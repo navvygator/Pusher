@@ -44,7 +44,7 @@ class Apns implements AdapterInterface
         $this->environment = $environment;
     }
 
-    public function push(DeviceCollection $devices, MessageInterface $message):void
+    public function push(DeviceCollection $devices, MessageInterface $message)
     {
         $gateway = $this->environment == AdapterInterface::ENVIRONMENT_PRODUCTION ? self::PUSH_PROD : self::PUSH_DEV;
         $payload = json_encode([

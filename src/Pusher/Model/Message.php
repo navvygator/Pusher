@@ -31,7 +31,7 @@ class Message implements MessageInterface
         $this->ttl = $ttl;
     }
 
-    public function setText(string $text):void
+    public function setText(string $text)
     {
         $this->text = $text;
     }
@@ -46,12 +46,12 @@ class Message implements MessageInterface
         return $this->title;
     }
 
-    public function setTitle(string $title): void
+    public function setTitle(string $title)
     {
         $this->title = $title;
     }
 
-    public function setPriority(int $priority):void
+    public function setPriority(int $priority)
     {
         $this->priority = $priority;
     }
@@ -61,7 +61,7 @@ class Message implements MessageInterface
         return (int) $this->priority;
     }
 
-    public function setTTL(int $ttl):void
+    public function setTTL(int $ttl)
     {
         $this->ttl = $ttl;
     }
